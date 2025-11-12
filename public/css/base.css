@@ -1,0 +1,49 @@
+:root{
+  --bg:#0e0f13;          /* casi negro */
+  --surface:#151821;     /* gris profundo */
+  --surface-2:#1b2030;   /* capa secundaria */
+  --border:#2a3244;      /* bordes suaves */
+  --text:#e6e9ef;        /* texto principal */
+  --muted:#9aa3b2;       /* texto secundario */
+  --primary:#2f6df6;     /* acento azul elegante */
+  --danger:#ef4444;      /* rojo elegante */
+  --warn:#f59e0b;        /* ámbar */
+  --ok:#16a34a;          /* verde */
+  --radius:12px;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text)}
+
+.container{max-width:1100px;margin:1rem auto;padding:0 1rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1rem;margin:.75rem 0}
+.title{margin:0 0 1rem 0;font-size:1.4rem}
+.subtitle{margin:.2rem 0 .8rem 0;font-size:1.05rem}
+.muted{color:var(--muted);font-size:.9rem}
+.row{display:flex;gap:.5rem}
+.wrap{flex-wrap:wrap}
+.mt-6{margin-top:.6rem}
+.w-100{width:100%}
+.w-120{width:120px}
+
+.input{background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:.55rem .7rem}
+.input:focus{outline:2px solid color-mix(in hsl, var(--primary) 60%, white 0%)}
+
+.btn{background:transparent;color:var(--text);border:1px solid var(--border);border-radius:10px;padding:.55rem .85rem;cursor:pointer}
+.btn:hover{border-color:color-mix(in hsl, var(--border) 70%, white 10%)}
+.btn-primary{background:var(--primary);border-color:var(--primary);color:white}
+.btn-primary:hover{filter:brightness(1.1)}
+.btn-danger{background:var(--danger);border-color:var(--danger);color:white}
+.btn-warn{background:var(--warn);border-color:var(--warn);color:black}
+
+.alert{border-radius:10px;padding:.5rem .75rem;margin:.5rem 0}
+.alert-error{background:color-mix(in hsl, var(--danger) 25%, black 70%);color:#fecaca;border:1px solid color-mix(in hsl, var(--danger) 60%, black 20%)}
+.alert-ok{background:color-mix(in hsl, var(--ok) 25%, black 70%);color:#bff7c9;border:1px solid color-mix(in hsl, var(--ok) 60%, black 20%)}
+
+table{width:100%;border-collapse:collapse;margin-top:.5rem}
+th,td{padding:.55rem;border-bottom:1px solid var(--border);text-align:left}
+
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:var(--surface-2);border-bottom:1px solid var(--border)}
+.brand{font-weight:600}
+.who{color:var(--muted)}
+
