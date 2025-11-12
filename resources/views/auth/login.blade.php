@@ -19,7 +19,7 @@
         <input id="password" class="input" type="password" placeholder="••••••" value="admin123" required />
         <button id="btnLogin" class="btn btn-primary w-100" type="submit">Entrar</button>
         <div id="err" class="alert alert-error" role="alert" hidden></div>
-        <p class="muted">Autenticación contra la API REST. El token se guarda en localStorage.</p>
+        <p class="muted">Cursos Scooters</p>
       </form>
     </section>
   </main>

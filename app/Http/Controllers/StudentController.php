@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
-{
+{   // Listar estudiantes con filtros opcionales
     public function index(Request $request)
     {
         $query = User::with('courses')->where('role', 'student');
@@ -54,7 +54,7 @@ class StudentController extends Controller
         $student = User::with('courses')->where('role', 'student')->findOrFail($id);
         return response()->json($student);
     }
-
+    // Actualizar información de un estudiante
     public function update(Request $request, int $id)
     {
         $student = User::where('role', 'student')->findOrFail($id);

@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 
 class UserCourseController extends Controller
 {
+    // Listar cursos asignados a un usuario
     public function index(int $id)
     {
         $user = User::with('courses')->findOrFail($id);
         return response()->json($user->courses);
     }
-
+    // Asignar curso a usuario
     public function attach(Request $request, int $id)
     {
         $data = $request->validate([
@@ -23,7 +24,7 @@ class UserCourseController extends Controller
         $user->courses()->syncWithoutDetaching([$data['course_id']]);
         return response()->json(['message' => 'Assigned']);
     }
-
+    // Eliminar curso asignado a usuario
     public function detach(int $id, int $courseId)
     {
         $user = User::findOrFail($id);

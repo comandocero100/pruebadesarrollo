@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create a default admin user for testing
+        // Creando un usuario admin por defecto para pruebas
         User::query()->updateOrCreate(
             ['email' => 'admin@example.com'],
             [
